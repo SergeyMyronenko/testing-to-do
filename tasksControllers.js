@@ -36,7 +36,7 @@ export const addNewTask = async (req, res, next) => {
 };
 
 export const deleteTask = async (req, res, next) => {
-  const taskId = req.params;
+  const taskId = req.params.id;
 
   try {
     const task = await Tasks.findById(taskId);
